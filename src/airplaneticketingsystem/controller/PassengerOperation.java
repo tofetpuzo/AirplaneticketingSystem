@@ -5,10 +5,21 @@
  */
 package airplaneticketingsystem.controller;
 
+import airplaneticketingsystem.Entities.Passenger;
+import java.sql.ResultSet;
 /**
  *
  * @author femitemiola
  */
 public class PassengerOperation {
+        
+    
+        public static ResultSet getPassenger(String email, String password) {
+            Passenger passenger = null;
+            //ResultSet rs =        
+            return null;
+            
+        }
+
     
 }

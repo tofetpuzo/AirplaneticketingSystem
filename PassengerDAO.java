@@ -48,10 +48,9 @@ public class PassengerDAO {
 
             if (con != null) {
                 Statement smt = con.createStatement();
-                String query = "INSERT into Passenger (passengerID, firstname, middleName, lastname, email, password, passportID, gender, dateCreated, Nationality, Address)"
+                String query = "INSERT into Passenger (passengerID, firstname, middleName, lastname, passportID, gender, dateCreated, Nationality, Address)"
                         + " VALUES(" + ",NULL," + ",'" + passenger.getFirstName() + "', '" + passenger.getMiddleName() + "', '" + passenger.getLastName()
-                        + "', '" + passenger.getEmail() + "', '" + passenger.getPassword() + "', '" + passenger.getPassportID()
-                        + "', '" + passenger.getGender() + "', " + ", NULL, " + "', " + ", NULL, " + ","
+                        + "', '" + passenger.getPassportID() + "', '" + passenger.getGender() + "', " + ", NULL, "  + "', " + ", NULL, " + ","
                         + "'" + passenger.getNationality() + "', '" + passenger.getAddress() + "')";
                 status = smt.executeUpdate(query);
                 if (status > 0) {
@@ -89,10 +88,10 @@ public class PassengerDAO {
             con = Connect.getConnection();
             if (con != null) {
                 Statement smt = con.createStatement();
-                String query = "Update from Passenger set passengerID=  " + ",NULL, " + " passenger = "
-                        + ",'" + passenger.getFirstName() + "','" + passenger.getMiddleName() + "','"
-                        + passenger.getLastName() + "', '" + passenger.getPassportID() + "', '"
-                        + passenger.getGender() + "', " + ", NULL, " + "', " + ", NULL, " + ","
+                String query = "Update from Passenger set passengerID=  " + ",NULL, " 
+                        + ",'" + passenger.getFirstName() + "','" + passenger.getMiddleName() + "','" 
+                        + passenger.getLastName() + "', '" + passenger.getPassportID() + "', '" 
+                        + passenger.getGender() + "', " + ", NULL, "  + "', " + ", NULL, " + ","
                         + "'" + passenger.getNationality() + "', '" + passenger.getAddress() + "'";
                 status = smt.executeUpdate(query);
                 if (status > 0) {
@@ -104,26 +103,7 @@ public class PassengerDAO {
         }
         return false;
     }
-
-    public static boolean updateRecipt() {
+    public static boolean updateRecipt(){
         return true;
     }
-
-    public static ResultSet getPassengerDetails(String email, String password) {
-//        System.out.println(username);
-//        System.out.println("====");
-        try {
-            con = Connect.getConnection();
-            if (con != null) {
-                Statement smt = con.createStatement();
-                String query = "SELECT * FROM Passenger where email= '" + email + "' , '" + password +"'";
-                ResultSet rs = smt.executeQuery(query);
-                return rs;
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(PassengerDAO.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
-
 }

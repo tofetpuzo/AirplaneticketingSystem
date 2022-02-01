@@ -27,21 +27,123 @@ public class PassengerInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel1 = new javax.swing.JLabel();
+        LoginPnl = new javax.swing.JPanel();
+        Userlbl = new javax.swing.JLabel();
+        userTxtField = new javax.swing.JTextField();
+        paswdlbl = new javax.swing.JLabel();
+        paswdTextField = new javax.swing.JPasswordField();
+        resetBtn = new javax.swing.JButton();
+        sumitBtn = new javax.swing.JButton();
+        singupBtn = new javax.swing.JButton();
+        slogan = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 511, Short.MAX_VALUE)
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("     Welcome  to \n        Bristish \nFlight Reservation");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("LandingPageFrame"); // NOI18N
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 18)); // NOI18N
+        jLabel1.setText("British Airline Reservation");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 240, 60));
+
+        Userlbl.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        Userlbl.setText("Email:");
+
+        userTxtField.setSize(new java.awt.Dimension(50, 50));
+
+        paswdlbl.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        paswdlbl.setText("password:");
+
+        paswdTextField.setSize(new java.awt.Dimension(40, 40));
+
+        resetBtn.setBackground(new java.awt.Color(51, 51, 255));
+        resetBtn.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        resetBtn.setForeground(new java.awt.Color(255, 255, 255));
+        resetBtn.setText("Reset");
+        resetBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetBtnActionPerformed(evt);
+            }
+        });
+
+        sumitBtn.setBackground(new java.awt.Color(51, 51, 255));
+        sumitBtn.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        sumitBtn.setForeground(new java.awt.Color(255, 255, 255));
+        sumitBtn.setText("Sumbit ");
+
+        singupBtn.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        singupBtn.setText("Signup");
+
+        javax.swing.GroupLayout LoginPnlLayout = new javax.swing.GroupLayout(LoginPnl);
+        LoginPnl.setLayout(LoginPnlLayout);
+        LoginPnlLayout.setHorizontalGroup(
+            LoginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LoginPnlLayout.createSequentialGroup()
+                .addGroup(LoginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LoginPnlLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(LoginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(LoginPnlLayout.createSequentialGroup()
+                                .addComponent(Userlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(userTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(LoginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, LoginPnlLayout.createSequentialGroup()
+                                    .addComponent(resetBtn)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(sumitBtn))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, LoginPnlLayout.createSequentialGroup()
+                                    .addComponent(paswdlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(paswdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(LoginPnlLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(singupBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(27, 27, 27))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 318, Short.MAX_VALUE)
+        LoginPnlLayout.setVerticalGroup(
+            LoginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LoginPnlLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(LoginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(userTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Userlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(LoginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(paswdlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(paswdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
+                .addGroup(LoginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(resetBtn)
+                    .addComponent(sumitBtn))
+                .addGap(39, 39, 39)
+                .addComponent(singupBtn)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
+
+        getContentPane().add(LoginPnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 260, 280));
+
+        slogan.setFont(new java.awt.Font("Apple Chancery", 3, 18)); // NOI18N
+        slogan.setText("Travel the World. with BAR...");
+        getContentPane().add(slogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 240, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_resetBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +181,18 @@ public class PassengerInterface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel LoginPnl;
+    private javax.swing.JLabel Userlbl;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JPasswordField paswdTextField;
+    private javax.swing.JLabel paswdlbl;
+    private javax.swing.JButton resetBtn;
+    private javax.swing.JButton singupBtn;
+    private javax.swing.JLabel slogan;
+    private javax.swing.JButton sumitBtn;
+    private javax.swing.JTextField userTxtField;
     // End of variables declaration//GEN-END:variables
 }

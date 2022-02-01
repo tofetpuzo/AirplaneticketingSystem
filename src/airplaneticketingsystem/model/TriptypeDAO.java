@@ -36,4 +36,9 @@ public class TriptypeDAO {
         }
         return null;
     }
+    public static ResultSet updateTriptype(){
+        
+        return null;
+        
+    }
 }
