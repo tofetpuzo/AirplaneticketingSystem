@@ -15,7 +15,7 @@ public class Flight {
     private final String FlightNumber;
     private String AirportDeparture;
     private String AirportArrival;
-    private Calendar DepartDate;
+    private Calendar DepartureDate;
     private Calendar DepartureTime;
     private Calendar ArrivalDate;
     private Calendar ArrivalTime;
@@ -25,7 +25,7 @@ public class Flight {
         this.FlightNumber = FlightNumber;
         this.AirportDeparture = AirportDeparture;
         this.AirportArrival = AirportArrival;
-        this.DepartDate = DepartDate;
+        this.DepartureDate = DepartDate;
         this.DepartureTime = DepartureTime;
         this.ArrivalDate = ArrivalDate;
         this.ArrivalTime = ArrivalTime;
@@ -57,12 +57,12 @@ public class Flight {
         this.AirportArrival = AirportArrival;
     }
 
-    public Calendar getDepartDate() {
-        return DepartDate;
+    public Calendar getDepartureDate() {
+        return DepartureDate;
     }
 
-    public void setDepartDate(Calendar DepartDate) {
-        this.DepartDate = DepartDate;
+    public void setDepartureDate(Calendar DepartureDate) {
+        this.DepartureDate = DepartureDate;
     }
 
     public Calendar getDepartureTime() {
