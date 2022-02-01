@@ -14,14 +14,12 @@ public class Airport {
     private final String AirportName;
     private final String AirportAddress;
     private final int airportCode;
-    private final String FlightNumber;
     private final String RegistrationNumber;
 
-    public Airport(String AirportName, String AirportAddress, int airportCode, String FlightNumber, String RegistrationNumber) {
+    public Airport(String AirportName, String AirportAddress, int airportCode, String RegistrationNumber) {
         this.AirportName = AirportName;
         this.AirportAddress = AirportAddress;
         this.airportCode = airportCode;
-        this.FlightNumber = FlightNumber;
         this.RegistrationNumber = RegistrationNumber;
     }
 
@@ -41,8 +39,6 @@ public class Airport {
         return airportCode;
     }
 
-    public String getFlightNumber() {
-        return FlightNumber;
-    }
+
 
 }
