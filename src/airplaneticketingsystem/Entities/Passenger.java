@@ -17,17 +17,22 @@ public class Passenger {
     private String firstName;
     private String middleName;
     private String lastName;
+    private String Email;
+    private String password;
     private String passportID;
     private String Gender;
     private Date dateCreated;
     private String Nationality;
     private String Address;
+    
 
-    public Passenger(int passengerID, String firstName, String middleName, String lastName, String passportID, String Gender, Date dateCreated, String Nationality, String Address) {
+    public Passenger(int passengerID, String firstName, String middleName, String lastName, String Email, String password, String passportID, String Gender, Date dateCreated, String Nationality, String Address) {
         this.passengerID = passengerID;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
+        this.Email = Email;
+        this.password = password; 
         this.passportID = passportID;
         this.Gender = Gender;
         this.dateCreated = dateCreated;
@@ -94,6 +99,22 @@ public class Passenger {
 
     public void setAddress(String Address) {
         this.Address = Address;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     
