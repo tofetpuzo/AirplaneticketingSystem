@@ -12,17 +12,13 @@ package airplaneticketingsystem.Entities;
 public class Triptype {
     private String TripName;
     private final int triptypeID;
-    private final String FlightNumber;
-    private final String passportID;
     private final int bookingID;
-    private final String RegistrationNumber;
+    private String FlightClass;
 
-    public Triptype(int triptypeID, String FlightNumber, String passportID, int bookingID, String RegistrationNumber) {
+    public Triptype(int triptypeID, String passportID, int bookingID, String RegistrationNumber, String FlightClass) {
         this.triptypeID = triptypeID;
-        this.FlightNumber = FlightNumber;
-        this.passportID = passportID;
         this.bookingID = bookingID;
-        this.RegistrationNumber = RegistrationNumber;
+        this.FlightClass = FlightClass;
     }
 
 
@@ -30,7 +26,6 @@ public class Triptype {
     public int getBookingID() {
         return bookingID;
     }
-
 
     public String getTripName() {
         return TripName;
@@ -44,16 +39,12 @@ public class Triptype {
         return triptypeID;
     }
 
-    public String getFlightNumber() {
-        return FlightNumber;
+    public String getFlightClass() {
+        return FlightClass;
     }
 
-    public String getPassportID() {
-        return passportID;
-    }
-
-    public String getRegistrationNumber() {
-        return RegistrationNumber;
+    public void setFlightClass(String FlightClass) {
+        this.FlightClass = FlightClass;
     }
 
     
