@@ -6,6 +6,7 @@
 package airplaneticketingsystem.Entities;
 
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -15,10 +16,10 @@ public class Flight {
     private final String FlightNumber;
     private String AirportDeparture;
     private String AirportArrival;
-    private Calendar DepartureDate;
-    private Calendar DepartureTime;
-    private Calendar ArrivalDate;
-    private Calendar ArrivalTime;
+    private Date DepartureDate;
+    private Date DepartureTime;
+    private Date ArrivalDate;
+    private Date ArrivalTime;
     private final String RegistrationNumber;
     private final String passportID;
 
@@ -59,35 +60,35 @@ public class Flight {
         this.AirportArrival = AirportArrival;
     }
 
-    public Calendar getDepartureDate() {
+    public Date getDepartureDate() {
         return DepartureDate;
     }
 
-    public void setDepartureDate(Calendar DepartureDate) {
+    public void setDepartureDate(Date DepartureDate) {
         this.DepartureDate = DepartureDate;
     }
 
-    public Calendar getDepartureTime() {
+    public Date getDepartureTime() {
         return DepartureTime;
     }
 
-    public void setDepartureTime(Calendar DepartureTime) {
+    public void setDepartureTime(Date DepartureTime) {
         this.DepartureTime = DepartureTime;
     }
 
-    public Calendar getArrivalDate() {
+    public Date getArrivalDate() {
         return ArrivalDate;
     }
 
-    public void setArrivalDate(Calendar ArrivalDate) {
+    public void setArrivalDate(Date ArrivalDate) {
         this.ArrivalDate = ArrivalDate;
     }
 
-    public Calendar getArrivalTime() {
+    public Date getArrivalTime() {
         return ArrivalTime;
     }
 
-    public void setArrivalTime(Calendar ArrivalTime) {
+    public void setArrivalTime(Date ArrivalTime) {
         this.ArrivalTime = ArrivalTime;
     }
 
