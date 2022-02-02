@@ -11,7 +11,6 @@ package airplaneticketingsystem.Entities;
  */
 public class Booking {
     private int bookingID;
-    private String Email;
     private String passportID;
     private String TicketNumber;
     private String SeatChoice;
@@ -22,9 +21,8 @@ public class Booking {
     private double payTicket;
     private String FlightStatus;
     
-    public Booking(int bookingID, String Email, String passportID, String TicketNumber, String SeatChoice, String Adult, String Child, int triptypeID, String FlightNumber, double payTicket, String FlightStatus) {
+    public Booking(int bookingID,String passportID, String TicketNumber, String SeatChoice, String Adult, String Child, int triptypeID, String FlightNumber, double payTicket, String FlightStatus) {
         this.bookingID = bookingID;
-        this.Email = Email;
         this.passportID = passportID;
         this.TicketNumber = TicketNumber;
         this.SeatChoice = SeatChoice;
@@ -52,13 +50,6 @@ public class Booking {
         this.bookingID = bookingID;
     }
 
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String Email) {
-        this.Email = Email;
-    }
 
     public String getPassportID() {
         return passportID;

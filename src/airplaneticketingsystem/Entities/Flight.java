@@ -20,8 +20,9 @@ public class Flight {
     private Calendar ArrivalDate;
     private Calendar ArrivalTime;
     private final String RegistrationNumber;
+    private final String passportID;
 
-    public Flight(String FlightNumber, String AirportDeparture, String AirportArrival, Calendar DepartDate, Calendar DepartureTime, Calendar ArrivalDate, Calendar ArrivalTime, String RegistrationNumber) {
+    public Flight(String FlightNumber, String AirportDeparture, String AirportArrival, Calendar DepartDate, Calendar DepartureTime, Calendar ArrivalDate, Calendar ArrivalTime, String RegistrationNumber, String passportID) {
         this.FlightNumber = FlightNumber;
         this.AirportDeparture = AirportDeparture;
         this.AirportArrival = AirportArrival;
@@ -30,6 +31,7 @@ public class Flight {
         this.ArrivalDate = ArrivalDate;
         this.ArrivalTime = ArrivalTime;
         this.RegistrationNumber = RegistrationNumber;
+        this.passportID = passportID;
     }
 
     public String getRegistrationNumber() {
@@ -87,6 +89,10 @@ public class Flight {
 
     public void setArrivalTime(Calendar ArrivalTime) {
         this.ArrivalTime = ArrivalTime;
+    }
+
+    public String getPassportID() {
+        return passportID;
     }
     
     

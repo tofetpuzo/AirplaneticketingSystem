@@ -13,23 +13,18 @@ public class Receipt {
     private final int receiptID;
     private final double AmountPaid;
     private final int bookingID;
-    private final String passportID;
+  
 
-    public Receipt(int receiptID, double AmountPaid, int bookingID, String passportID) {
+    public Receipt(int receiptID, double AmountPaid, int bookingID) {
         this.receiptID = receiptID;
         this.AmountPaid = AmountPaid;
         this.bookingID = bookingID;
-        this.passportID = passportID;
-    }
-
-    public String getPassportID() {
-        return passportID;
+      
     }
 
     public int getReceiptID() {
         return receiptID;
     }
-
 
     public double getAmountPaid() {
         return AmountPaid;
