@@ -29,8 +29,7 @@ public class Receipt {
     public double getAmountPaid() {
         return AmountPaid;
     }
-
-
+    
     public int getBookingID() {
         return bookingID;
     }

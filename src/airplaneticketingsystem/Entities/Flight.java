@@ -23,7 +23,7 @@ public class Flight {
     private final String RegistrationNumber;
     private final String passportID;
 
-    public Flight(String FlightNumber, String AirportDeparture, String AirportArrival, Calendar DepartDate, Calendar DepartureTime, Calendar ArrivalDate, Calendar ArrivalTime, String RegistrationNumber, String passportID) {
+    public Flight(String FlightNumber, String AirportDeparture, String AirportArrival, Date DepartDate, Date DepartureTime, Date ArrivalDate, Date ArrivalTime, String RegistrationNumber, String passportID) {
         this.FlightNumber = FlightNumber;
         this.AirportDeparture = AirportDeparture;
         this.AirportArrival = AirportArrival;
