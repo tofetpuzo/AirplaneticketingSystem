@@ -16,7 +16,7 @@ import java.sql.Connection;
 public class Connect {
     static String url = "jdbc:mysql://localhost:3306/kebank";
     static String username = "root";
-    static String password = "mariopuzo4u";
+    static String password = "";
     static Connection con = null;
     
     public static Connection getConnection() throws SQLException{
