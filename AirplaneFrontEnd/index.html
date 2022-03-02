@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <title> Airplane Booking System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
     <table>
-        <!-- !<div class="container"> -->
-            <nav class="bnavbar navbar-dark bg-primary">
-                <button type="button" class="btn btn-primary" name="accommondatio">ACCOMODATION</button>
-                <button type="button" class="btn btn-primary">TOURS</button>
-                <button type="button" class="btn btn-primary">TRANSPORT</button>
-                <button type="button" class="btn btn-primary">ACTIVITIES</button>
-                <button src="./script.js" type="submit" class="btn btn-primary" id="fli-id" onclick="btnClicked()">FLIGHT</button>
+        <nav class="bnavbar navbar-dark bg-primary">
+            <button type="button" class="btn btn-primary" name="accommondatio">ACCOMODATION</button>
+            <button type="button" class="btn btn-primary">TOURS</button>
+            <button type="button" class="btn btn-primary">TRANSPORT</button>
+            <button type="button" class="btn btn-primary">ACTIVITIES</button>
+            <button type="button" class="btn btn-primary" id="btn-flight" onclick="btnClicked()">FLIGHT</button>
+            <script>
+                function btnClicked() {
+                    document.getElementById('flight').style.display = "block";
+                }
+            </script>
 
-                
+            <form id="flight" style="display: none;">
+                <tr>
+                    <td>Flighting to </td>
+                </tr>
 
-            </nav>
+                <!-- <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div> -->
+            </form>
+
+        </nav>
 
 
-        <!-- /div>
- 
+
 
     </table>
-    <h1 class="text-success color=red">Welcome to Triver Airplane Booking</h1>
 
-        
-    </body>
+
+
+    <div class=""></div>
+    <!-- <h1 class="text-success color=red">Welcome to Triver Airplane Booking</h1> -->
+
+
+</body>
 
 </html>

@@ -1,4 +1,4 @@
 function btnClicked() {
-    document.location.href="";
-    
+    document.getElementById('flight').style.display ="block";
+  
 }
