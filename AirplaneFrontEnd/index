@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-success">Hello, Bros</h1>
+    <div class="container">
+        <div class="alert alert-primary">
+            <strong>
+                Well Done!!!
+
+            </strong>
+            <p>You have successfully created an alert</p>
+
+        </div>
+        <button type="button" class="btn btn-primary">Sumbit</button>
+        <button type="button" class="btn btn-outline-primary">Sumbit</button>
+
+        <!-- <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr>
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+          </div> -->
+    </div>
+    <div class="container">
+
+
+        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+
+        </button>
+
+        <div class="dropdown">
+
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Dropdown
+            </button>
+            <div class="dropdown-menu" aria-labelledby="triggerId">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item disabled" href="#">Disabled action</a>
+                <h6 class="dropdown-header">Section header</h6>
+                <a class="dropdown-item" href="#">Action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">After divider action</a>
+            </div>
+        </div>
+    </div>
+    <p> </p>
+    <div class="container">
+        <div class="btn-group" role="group" aria-label="">
+            <button type="button" class="btn btn-">Home</button>
+            <button type="button" class="btn btn-secondary rounded-pill text-success">About Us</button>
+            <button type="button" class="btn btn-secondary">Terms & Conditions</button>
+            <div class="btn-group" role="group">
+                <button id="dropdownId" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#"> Profiles</a>
+                    <a class="dropdown-item" href="#">Services</a>
+                    <a class="dropdown-item" href="#">Marketing and Strategy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="alert alert-Error " role="alert">
+            <strong>Error </strong>
+            <p>You are enabled</p>
+        </div>
+    </div>
+    <div class="container">
+        <table>
+            <div class="form-group">
+                <tr>
+                    <td>
+                        <label for="username">
+                            username:
+                        </label>
+                    </td>
+                    <td>
+                        <input style="width: 2in; height: 0.3in;" type="email" class="form-control" name="username" id="uname"
+                            aria-describedby="emailHelpId" placeholder="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pswd">
+                            password:
+                        </label>
+                    </td>
+                    <td>
+                        <input style="width: 2in; height: 0.3in;" type="password" class="form-control" name="pswd" id="pswd"
+                            aria-describedby="emailHelpId" placeholder="">
+                    </td>
+                </tr>          
+            </div>
+            <tr>
+                <td>
+                    <small id="emailHelpId" class="form-text text-muted">Help text</small> 
+                  
+                </td>
+                <p> </p>
+                <td>  <input style="width: 2in; height: 0.3in;" type="email" class="form-control" name="username" id="uname"
+                    aria-describedby="emailHelpId" placeholder=""></td>
+            </tr>
+           
+        </table>
+ 
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
