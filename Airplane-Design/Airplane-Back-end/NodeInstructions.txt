@@ -1,0 +1,8 @@
+npm init
+npm install ejs
+npm install express --save
+npm install mysql --save
+npm install method-override --save: This is used override post, get, put,delete.(http-form protocol)
+npm install multer --save  : This is used for forms upload.
+ npm install cookie-parser --save
+ npm install body-parser --save
