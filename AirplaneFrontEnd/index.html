@@ -159,44 +159,90 @@
                     </td>
                     <td>
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="dis-value-id">
-                            <label class="custom-control-label" for="Direct Flight">Direct Flight</label>
-                          </div>
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Direct Flight</label>
+                        </div>
                     </td>
                     <td>
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="contr-id">
-                            <label class="custom-control-label" for="customCheck1">Contracted rates only</label>
-                          </div>
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">Contracted rates only</label>
+                        </div>
                     </td>
-                    <td colspan="1">
-                    </td>
-
+                    <td colspan="1"></td>
                     <td>
                         <form class="d-flex">
                             <button class="btn btn-outline-success" type="submit "
                                 style="width: 0.9in; height: 0.4in; background-color: rgb(28, 90, 148);"><strong>SEARCH</strong></button>
                         </form>
-      
-                    </td>
-                   
 
+                    </td>
                 </tr>
-   
             </table>
 
         </form>
 
     </div>
     <tr>
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
+        <div class="card text-white bg-primary mb-3" style="max-width: 22rem;">
+            <div class="card-header" style="width: 2in; height: 0.4in;"><strong> Price Filter</strong> </div>
             <div class="card-body">
-              <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <form class="px-0.05 py-3">
+                    <div class="form-group">
+                        <label for="Starting a name">Customer</label>
+                        <input style="width: 2in; height: 0.4in;" type="text" class="form-control" id="text-success"
+                            placeholder="Starting typing a name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Starting Customer a name">Market</label>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                            placeholder="Default Market Min ps:1 ">
+                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <select class="btn btn-outline dropdown-toggle dropdown-toggle-split" name="Destination"
+                                id="Destination" style="width: 1.35in; height: 0.4in; left: 0.05;  background-color: aliceblue;">
+                                <option value=""></option>
+                                <option value="London">EUR</option>
+                                <option value="London">POUNDS</option>
+                                <option value="London">NAIRA</option>
+                                <option value="London">YEN</option>
+                                <option value="London"></option>
+                            </select>
+                            </td>
+    
+                            <td>
+                                <div class="form-group">
+                                    <label for="Starting Customer a name">Market</label>
+                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                                        placeholder="Default Market Min ps:1 ">
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </table>
+   
+
+
             </div>
-          </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">New around here? Sign up</a>
+            <a class="dropdown-item" href="#">Forgot password?</a>
+            <input type="range" name="range" step="50000" min="100000" max="1000000" value=""
+                onchange="rangePrimary.value=value">
+            <input type="text" id="rangePrimary" />
+
+        </div>
+        </div>
     </tr>
+    <table>
+        <!-- <div class="dropdown-menu"> -->
+
+        <!-- </div> -->
+    </table>
 
     <form id="flight-form" style="display: none;">
         <tr>
