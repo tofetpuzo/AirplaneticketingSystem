@@ -26,3 +26,10 @@
             </tr>
             
             <td>Flying to </td>
+
+
+
+
+                              <input type="range" name="range" step="50000" min="100000" max="1000000" value=""
+                            onchange="rangePrimary.value=value">
+                        <input type="text" id="rangePrimary" />
