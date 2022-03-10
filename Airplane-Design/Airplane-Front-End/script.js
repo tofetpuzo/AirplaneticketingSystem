@@ -15,6 +15,9 @@ btn.addEventListener('click' , () =>{
 
 
 function change_slider_value (){
+    var slider = document.getElementById('slider')
+    var slider_vs = parseFloat(slider.value).
+    document.getElementById('rangePrimary').innerHTML = parseFloat(slider_vs)
 
 }
 
