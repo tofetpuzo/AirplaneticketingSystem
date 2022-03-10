@@ -281,12 +281,18 @@
                
     </form>
     <div class="dropdown-divider"></div>
-    <label for="Starting Customer a name"><strong>Departure Time</strong></label>
-    <input type="range" name="range" step="" min="06.00" max="23.00" value=""
+    <label for="Starting Customer a name"><strong>1. &nbsp;Departure Time</strong></label>
+    <input type="range" name="range" step="" min="06.00" max="24.00" value=""
+    onchange="rangePrimary.value=value">
+    <label for="Starting Customer a name"><strong>Time Range</strong></label>
+    
+    <label for="Starting Customer a name"><strong>2. &nbsp;Arrival Time</strong></label>
+    <input type="range" name="range" step="" min="06.00" max="24.00" value=""
     onchange="rangePrimary.value=value">
     <input type="text" id="rangePrimary" />
     <input type="range" name="range" step="50000" min="100000" max="1000000" value=""
         onchange="rangePrimary.value=value">
+    
     
     <a class="dropdown-item" href="#">Forgot password?</a>
     </div>
@@ -298,16 +304,6 @@
         <!-- </div> -->
     </table>
 
-    <form id="flight-form" style="display: none;">
-        <tr>
-            <td>Flighting from <span class="border border-primary"></span></td>
-            <td>Flighting to </td>
-            <div class="col-sm-10">
-                <input type="text">
-            </div>
-        </tr>
-
-    </form>
    
 
    
