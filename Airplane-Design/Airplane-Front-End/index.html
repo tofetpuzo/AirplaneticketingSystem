@@ -286,14 +286,16 @@
     </form>
     <div class="dropdown-divider"></div>
     <label for="Starting Customer a name"><strong>1. &nbsp;Departure Time</strong></label>
-    <input type="range" name="range" step="" min="00" max="24.00" value="" onchange="rangePrimary.value=value">
+
+    
+    <input type="range" name="range" id= "slider" step="" min="00" max="24.00" value="" onchange="rangePrimary.value=value">
+    <label id="rangePrimary">00.00</label>
     <label for="Starting Customer a name"><strong>Time Range</strong></label>
 
     <label for="Starting Customer a name"><strong>2. &nbsp;Arrival Time</strong></label>
     <input type="range" name="range" step="" min="0" max="24.00" value="" onchange="rangePrimary.value=value">
     <input type="text" id="rangePrimary" />
-    <input type="range" name="range" step="50000" min="100000" max="1000000" value=""
-        onchange="rangePrimary.value=value">
+
 
 
 

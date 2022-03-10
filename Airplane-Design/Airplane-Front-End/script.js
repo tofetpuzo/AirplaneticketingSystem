@@ -14,3 +14,8 @@ btn.addEventListener('click' , () =>{
 });
 
 
+function change_slider_value (){
+
+}
+
+
