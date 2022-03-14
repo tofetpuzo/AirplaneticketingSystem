@@ -39,13 +39,13 @@
                             <option value="London">Paris</option>
                             <option value="London">Germany</option>
                         </select>
-    
                     </td>
                     <td>
                         <label for="flight-from">
                             Flying to
                         </label>
                         <br />
+
                         <select class="btn btn-secondary dropdown-toggle dropdown-toggle-split" name="Destination"
                             id="Destination"
                             style="width: 3in; height: 0.4in; background-color: aliceblue; color: black;">
@@ -154,19 +154,18 @@
 
 
     </div>
- <label> <h3 class="text-sec">Flight Search </h1></label>
 
-    <div class="card text-white mb-3" style="max-width: 22rem; background-color: rgb(122, 165, 221); ">
-        
-        <div class="card-header" style="width: 3.7in; height: 0.4in;"><strong> Price Filter</strong> </div>
-        <div class="card-body">
+    <tr> <td>  <input style="width: 9.5in; height: 0.5in; font-size: 28pt; text-align: right; position: absolute; display: block; " type="text" class="form-control"id="text-success" placeholder="Flight Search "></td>
+    <div class="card text-white mb-3" style="max-width: 25rem; margin-left: 0.5in; background-color: rgb(122, 165, 221)">
+        <div class="card-body" >
+            <label for="Price"><strong> Price Filter</strong></label>
             <form class="px-0 py-3">
                 <table>
                     <tr>
                         <td colspan="3">
                             <div class="form-group">
                                 <label for="Starting a name">Customer</label>
-                                <input style="width: 2in; height: 0.4in;" type="text" class="form-control"
+                                <input style="width: 2.5in; height: 0.5in;" type="text" class="form-control"
                                     id="text-success" placeholder="Starting typing a name">
 
                             </div>
@@ -186,8 +185,9 @@
 
                 <div class="form-group">
                     <label for="Starting Customer a name">Market</label>
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword1"
-                        placeholder="Default Market Min ps:1 ">
+                    <input style="width: 2.5in; height: 0.5in;" type="text" class="form-control"
+                    id="text-success" placeholder="Default Market Min ps:1">
+                        
                 </div>
                 <table>
                     <tr>
@@ -213,7 +213,7 @@
                         </td>
                         <td colspan="8"></td>
                         <td>
-                            <div class="form-group" style="width: 1.5in; height: 0.6in; left: 0.05;">
+                            <div class="form-group" style="width: 1.6in; height: 0.6in; left: 0.05;">
                                 <label for="Starting Customer a name">Amount type</label>
                                 <input placeholder="Total Number" type="number" id="example" class="form-control"
                                     style="width: 1.7in; height: 0.4in;">
