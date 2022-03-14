@@ -23,7 +23,7 @@
     </nav>
     <script src="./script.js"></script>
     <div class="jumbotron" style="background-color: rgb(143, 186, 241);">
-        <form id="flight-form" style="display: none;">
+        <form id="flight-form" style="display: none;" method="post">
             <table>
                 <tr>
                     <td>
@@ -141,10 +141,9 @@
                     </td>
                     <td colspan="1"></td>
                     <td>
-                        <form class="d-flex">
-                            <button class="btn btn-outline-success" type="submit "
-                                style="width: 0.9in; height: 0.4in; background-color: rgb(28, 90, 148);" onclick="find_all_flight()" href="flightbooking.html"><strong>SEARCH</strong></button>
-                        </form>
+                        <button class="btn btn-outline-success" type="submit"
+                            style="width: 0.9in; height: 0.4in; background-color: rgb(28, 90, 148);"
+                            onsubmit="find_all_flight()" href="flightbooking.html"><strong>SEARCH</strong></button>
 
                     </td>
                 </tr>
@@ -170,7 +169,8 @@
             </tr>
         </div>
     </table> -->
-    <div class="card text-white mb-3" style="max-width: 22rem; margin-left: 0.3in; background-color: rgb(122, 165, 221)">
+    <div class="card text-white mb-3"
+        style="max-width: 22rem; margin-left: 0.3in; background-color: rgb(122, 165, 221)">
         <div class="card-body">
 
             <label for="Price"><strong> Price Filter</strong></label>
