@@ -20,6 +20,10 @@ function change_slider_value (){
 
 }
 
+function accomodation_page(){
+    
+}
+
 // function find_all_flight(){
     
 
