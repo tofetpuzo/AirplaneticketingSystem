@@ -20,6 +20,8 @@ function change_slider_value (){
 
 }
 
+// The 
+
 function accomodation_page(){
     
 }
