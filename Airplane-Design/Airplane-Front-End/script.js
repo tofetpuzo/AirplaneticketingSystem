@@ -1,3 +1,4 @@
+// This code hides the flight page
 const btn = document.getElementById('btn-flight');
 
 btn.addEventListener('click' , () =>{
@@ -19,9 +20,10 @@ function change_slider_value (){
     document.getElementById('rangePrimary').innerHTML = parseFloat(slider.value)
 
 }
+// This is the accommodation page
 
 function accomodation_page(){
-    
+   window.location='Accommodation.html';  
 }
 
 // function find_all_flight(){
