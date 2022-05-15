@@ -1,13 +1,13 @@
 // This code hides the flight page
 const btn = document.getElementById('btn-flight');
 
-btn.addEventListener('click' , () =>{
+btn.addEventListener('click', () => {
     const form = document.getElementById('flight-form');
 
-    if(form.style.display === 'none'){
+    if (form.style.display === 'none') {
         // this shows the form
         form.style.display = 'block';
-    }else{
+    } else {
         // this hides the form
         form.style.display = 'none';
     }
@@ -15,7 +15,7 @@ btn.addEventListener('click' , () =>{
 });
 
 
-function change_slider_value (){
+function change_slider_value() {
     var slider = document.getElementById('slider')
     document.getElementById('rangePrimary').innerHTML = parseFloat(slider.value)
 
@@ -24,12 +24,11 @@ function change_slider_value (){
 
 // The 
 
-function accomodation_page(){
-   window.location='Accommodation.html';  
+function accomodation_page() {
+    window.location = 'Accommodation.html';
 }
 
-// function find_all_flight(){
-    
-
-// }
+function find_all_flight() {
+    window.location = 'flightbooking.html';
+}
 
