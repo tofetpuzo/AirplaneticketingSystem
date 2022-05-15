@@ -10,26 +10,36 @@ app.get("/Airplane-Front-End/flightbooking.html", async (req, res) => {
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    fs.readFile('index.html', function(error , data){
-        if (error){
-            res.write(404)
-            res.write('Error: File Not found')
-        }else{
-            
-        }
+    var filepath = false;
+    if (req.url == '/') {
+        filepath = 'Airplane-Front-End/index.html'
+        fs.readFile(filepath, function (error, data) {
+            if (error) {
+                res.write(404)
+                res.write('Error: The index file can not be found')
+            } else {
+                res.write(data)
+            }
+            res.end()
+        })
+    } else {
+        fs.readFile(filepath, function (error, data) {
+            if (error) {
+                res.write(404)
+                res.write('Error: The flight or accommodation file can not be found')
+            } else {
+                res.write(data)
+            }
+            res.end()
+        })
 
-    })
-    if (req.method === 'GET'){
-        
-
-    }
-
+    };
 });
 
-server.listen(port, function(error){
-    if(error) console.log('Something went wrong', error)
-    else{
+server.listen(port, function (error) {
+    if (error) console.log('Something went wrong', error)
+    else {
         console.log('Server is listening on port' + port)
-    }  
-
-})
+    }
+ß
+});
