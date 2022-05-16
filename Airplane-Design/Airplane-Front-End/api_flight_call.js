@@ -8,7 +8,7 @@ const options = {
     // url: 'https://aerodatabox.p.rapidapi.com/flights/number/EW789/2022-05-23',
     headers: {
         'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com',
-        'X-RapidAPI-Key': ''
+        'X-RapidAPI-Key': '',
         useQueryString: true
     }
     https://aerodatabox.p.rapidapi.com/flights/{searchBy}/{searchParam}/dates/{fromLocal}/{toLocal}
