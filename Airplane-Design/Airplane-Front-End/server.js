@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/html' });
     var filepath = false;
     if (req.url == '/') {
-        filepath = '/path'
+        filepath = ''
         fs.readFile(filepath, function (error, data) {
             if (error) {
                 res.writeHead(404)
@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
             res.end()
         })
     } else {
-        filepath = '/path' + req.url
+        filepath = '' + req.url
         fs.readFile(filepath, function (error, data) {
             if (error) {
                 res.writeHead(404)

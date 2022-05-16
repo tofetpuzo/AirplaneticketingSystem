@@ -32,3 +32,13 @@ function find_all_flight() {
     window.location = 'flightbooking.html';
 }
 
+// const button_flight = document.getElementById('flight-buton');
+
+// button_flight.addEventListener('click', () => {
+
+
+// });
+
+function flight_booking_page() {
+    window.location = 'index.html';
+}
