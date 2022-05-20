@@ -42,3 +42,6 @@ function find_all_flight() {
 function flight_booking_page() {
     window.location = 'index.html';
 }
+
+
+
