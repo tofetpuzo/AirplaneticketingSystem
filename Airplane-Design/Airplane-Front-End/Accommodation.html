@@ -257,29 +257,6 @@
 
 </body>
         
-        
-        For people wanting a server runnable from within NodeJS script:
-
-You can use expressjs/serve-static which replaces connect.static (which is no longer available as of connect 3):
-
-myapp.js:
-
-var http = require('http');
-
-var finalhandler = require('finalhandler');
-var serveStatic = require('serve-static');
-
-var serve = serveStatic("./");
-
-var server = http.createServer(function(req, res) {
-  var done = finalhandler(req, res);
-  serve(req, res, done);
-});
-
-server.listen(8000);
-and then from command line:
-
-$ npm install finalhandler serve-static
-$ node myapp.js
+  
 
         
