@@ -26,5 +26,257 @@
             </tr>
             
             <td>Flying to </td>
+            
+            
+            
+            
+            
+             
 
 
+// This variable points to the flask server which fetches the image from your machine.
+
+
+import React, {useEffect, useState} from "react";
+
+import OpenSeaDragon from "openseadragon";
+import $, { event } from 'jquery';
+// This variable points to the flask server which fetches the image from your machine.
+var dziFilesLocationUrl = 'http://localhost:8000/dummy_dzi/PoC_TMA2_files/';
+var  api_url =   "http://127.0.0.1:7000/exported_coordinates";
+var dziImageData = '<?xml version="1.0" encoding="UTF-8"?><Image xmlns="http://schemas.microsoft.com/deepzoom/2008" TileSize="128" Overlap="2" Format="png"><Size Width="8006" Height="15420"/></Image>'
+
+
+
+var tileSourceFromData = function(dataImage, filesUrl) {
+  var $xml = $($.parseXML(dataImage));
+  var $image = $xml.find('Image');
+  var $size = $xml.find('Size');
+
+// This converts the XML into a DZI tile source specification object that OpenSeadragon understands. 
+var dzi = {
+    Image: {
+      xmlns: $image.attr('xmlns'),
+      TileSize: $image.attr('TileSize'),
+      MaxLevel: $image.attr('MaxLevel'),
+      Url: filesUrl,
+      Format: $image.attr('Format'),
+      Overlap: $image.attr('Overlap'),
+      // NextItemId: $collectionImage.attr('NextItemId'),    
+      Size: {
+        Height: $size.attr('Height'),
+        Width: $size.attr('Width')
+      },
+    }
+  };  
+  
+  console.log(dzi);
+  return dzi;
+}; 
+
+export function Metadata() {
+    const [viewer, setViewer] = useState();
+    const [selectedROICoordinates, setselectedROICoordinates] = useState(null);
+    const [data, setData] = useState();
+
+
+    useEffect(() => {
+        fetch(api_url)
+        .then(res => res.json())
+        .then(res => setData(res))
+    }, []);
+
+
+    // Opens the image 
+    useEffect(() => {
+      
+      const viewer_ = OpenSeaDragon({
+        id: "openseadragon1",
+        prefixUrl: "/openseadragon/images/",
+        animationTime: 0.5,
+        scrollToZoom: true,
+        blendTime: 0.1,
+        //constrainDuringPan: true,
+        // maxZoomPixelRatio: 2,
+        // minZoomLevel: 1,
+        //visibilityRatio: 1,
+        //zoomPerScroll: 2,
+        useCanvas: false,
+        crossOriginPolicy: true,
+        ajaxWithCredentials: true,
+        // tileSources: "" + decodeURI(dziFilesUrl).replace('_files', '.dzi')
+        tileSources: tileSourceFromData(dziImageData, dziFilesLocationUrl)
+      });
+      setViewer(viewer_)
+      window.viewer = viewer_
+
+
+      function ROICoordinatesTrigger(view_exported_roi_coordinates) {
+        console.log("I am getting here")
+
+        // if(viewer_ && view_exported_roi_coordinates){
+           viewer_.addHandler('canvas-click', function(event) {
+          
+              console.log("I am getting here", typeof view_exported_roi_coordinates[0], Number(view_exported_roi_coordinates[0]))
+
+              console.log(" so we are going to have happy days :) ")
+
+              console.log("----")
+              console.log(...view_exported_roi_coordinates)
+
+              // viewer.viewport.fitBounds(OpenSeadragon.Rect(x - w / 2, y - h / 2, w, h));
+              //const [x, y] = view_exported_roi_coordinates
+              var webCanvasPoint = event.position;
+
+          // Convert that to viewport coordinates, the lingua franca of OpenSeadragon coordinates.
+              var viewportPoint = viewer_.viewport.pointFromPixel(webCanvasPoint);
+
+          // Convert from viewport coordinates to image coordinates.
+              var imagePixelPoint = viewer_.viewport.viewportToImageCoordinates(viewportPoint);
+              
+              // console.log(typeof x,"->", x, typeof y, "->" ,y)
+              // var imagePolyPts = new OpenSeaDragon.Point(x, y);
+              // console.log(viewer.world.getHomeBounds())
+
+              // console.log("converting points on the images ")
+              // console.log(imagePolyPts)
+
+              viewer_.viewport.panTo(imagePixelPoint, true)
+              viewer_.viewport.zoomTo(3)
+
+            }
+          )
+        // }
+        // viewer.setFullScreen(false);
+     }
+     ROICoordinatesTrigger(selectedROICoordinates)
+     console.log("----")      
+      
+
+    //   return viewer_.destroy();
+    }, [selectedROICoordinates]);
+    
+    //useEffect(() => { 
+
+    //}, [viewer, selectedROICoordinates])
+
+
+    function handleROIDropdown(event) {
+       let coordinate = Object.values(event.target.value).join('').split(',').flatMap(x => parseInt(x))
+       setselectedROICoordinates(coordinate)
+    }
+return (
+    <div id="roi-picker">
+    <select id="roi-picker" onChange={handleROIDropdown}
+    style={{ height: "20px", width: "70px", position: "absolute", top: "50", left: "50" }}>
+        {data && Object.entries(data).map(([roi, coordinates]) => (<option key={roi} value={coordinates}>{roi}</option>))}
+    </select>
+    </div>
+      );            
+};
+
+
+
+
+
+
+
+
+
+import OpenSeaDragon from "openseadragon";
+import React, { useEffect, useState} from "react";
+import $ from 'jquery';
+
+// This variable points to the flask server which fetches the image from your machine.
+var dziFilesLocationUrl = 'http://localhost:8000/dummy_dzi/PoC_TMA2_files/';
+var  api_url =   "http://127.0.0.1:7000/exported_coordinates";
+
+// var dziFilesUrl = 'http://127.0.0.1:5000/api/dzi';
+var dziImageData = '<?xml version="1.0" encoding="UTF-8"?><Image xmlns="http://schemas.microsoft.com/deepzoom/2008" TileSize="128" Overlap="2" Format="png"><Size Width="8006" Height="15420"/></Image>'
+// '<?xml version="1.0" encoding="UTF-8"?><Image xmlns="http://schemas.microsoft.com/deepzoom/2008" TileSize="128" Overlap="2" Format="png"><Size Width="8006" Height="15420"/></Image>';
+// a function that takes data which is the image and the corresponding fileURL(tilesources)
+var tileSourceFromData = function(dataImage, filesUrl) {
+  var $xml = $($.parseXML(dataImage));
+  var $image = $xml.find('Image');
+  var $size = $xml.find('Size');
+
+  // <Items><I Id="0" N="0" Source="http://cache.zoom.it/content/L8wh.dzi"><Size Width="54000" Height="27000"/></I>
+  // var viewers = new OpenSeaDragon.Viewer(op)
+// This converts the XML into a DZI tile source specification object that OpenSeadragon understands. 
+  var dzi = {
+    Image: {
+      xmlns: $image.attr('xmlns'),
+      TileSize: $image.attr('TileSize'),
+      MaxLevel: $image.attr('MaxLevel'),
+      Url: filesUrl,
+      Format: $image.attr('Format'),
+      Overlap: $image.attr('Overlap'),
+      // NextItemId: $collectionImage.attr('NextItemId'),    
+      Size: {
+        Height: $size.attr('Height'),
+        Width: $size.attr('Width')
+      },
+    }
+  };  
+  
+  console.log(dzi);
+  return dzi;
+}; 
+
+// export { OpenSeaDragonViewer }
+
+export function OpenSeaDragonViewer (){
+
+  const[, setViewer] = useState(null);
+  const[, setroiCoordinates] = useState(null);
+  // const[ready, setReady] = useState(true);
+  // const id = React.useId()
+    // if(!ready) return;   
+
+  // Opens the image 
+  useEffect(() => {
+    const viewer_= OpenSeaDragon({
+      id: "openseadragon1",
+      prefixUrl: "/openseadragon/images/",
+      animationTime: 0.5,
+      scrollToZoom: true,
+      blendTime: 0.1,
+      constrainDuringPan: true,
+      maxZoomPixelRatio: 2,
+
+      minZoomLevel: 1,
+      visibilityRatio: 1,
+      zoomPerScroll: 2,
+      useCanvas: false,
+      crossOriginPolicy: true,
+      ajaxWithCredentials: true,
+      // tileSources: "" + decodeURI(dziFilesUrl).replace('_files', '.dzi')
+      tileSources: tileSourceFromData(dziImageData, dziFilesLocationUrl)
+    });
+    window.viewer = viewer_
+    setViewer(viewer_);
+
+    setroiCoordinates(() =>    {
+      // with addHandler like so:
+        new viewer_.addHandler('canvas-click', function(event) {
+            // The canvas-click event gives us a position in web coordinates.
+            var webCanvasPoint = event.position;
+
+            // Convert that to viewport coordinates, the lingua franca of OpenSeadragon coordinates.
+            var viewportPoint = viewer_.viewport.pointFromPixel(webCanvasPoint);
+
+            // Convert from viewport coordinates to image coordinates.
+            var imagePixelPoint = viewer_.viewport.viewportToImageCoordinates(viewportPoint);
+
+            // Show the results.
+            console.log(webCanvasPoint.toString(), viewportPoint.toString(), imagePixelPoint.toString());
+
+            viewer_.viewport.panTo(imagePixelPoint, true)
+            viewer_.viewport.zoomTo(3)
+        })        
+        viewer_.setFullScreen(false);
+      })
+    return () => viewer_.destroy();
+},[]); 
+return (<div id="openseadragon1" style={{height: "800px", width: "1200px"  }}>
+</div>)};
