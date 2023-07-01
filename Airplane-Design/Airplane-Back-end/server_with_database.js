@@ -40,7 +40,7 @@ app.get("/:id", async function (req, res) {
     try{
         const SQLquery = 'SELECT * FROM users where user_id= ?';
         const rows = await pool.query(SQLquery, req.params.id);
-        //console.log(JSON.parse(rows));
+        console.log(JSON.parse(rows));
         // This will help in waiting for further calls
         res.status(200).json(rows);
         // This will end the communication
