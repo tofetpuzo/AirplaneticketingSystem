@@ -69,14 +69,6 @@ app.get("/addUser/:fname/:lname/:uname/:pswd/:profession/:gender", async functio
     }catch(error){
         res.status(400).send(error.message);
     }
-    
-
-
-
-
-
-
-
 
     // fs.readFile("./users.json", "utf8", function (err, data) {
     //     var users = JSON.parse(data);
