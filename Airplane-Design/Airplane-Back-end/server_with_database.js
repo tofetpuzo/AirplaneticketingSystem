@@ -11,10 +11,10 @@ const pool = require("./database")
 app.get("/listUsers", async function (req, res) {
 
     // This code is to read data from file
-    // fs.readFile("./users.json", "utf8", function (err, data) {
-    //     console.log(JSON.parse(data));
-    //     res.end(data);
-    // });
+    fs.readFile("./users.json", "utf8", function (err, data) {
+        console.log(JSON.parse(data));
+        res.end(data);
+    });
 
     try{
         const SQLquery = 'SELECT * FROM users'
