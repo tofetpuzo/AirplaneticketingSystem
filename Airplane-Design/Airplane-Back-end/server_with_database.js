@@ -23,7 +23,7 @@ app.get("/listUsers", async function (req, res) {
         // This will help in waiting for further calls
         res.status(200).json(rows);
         // This will end the communication
-        //res.status.apply(200).end(rows);
+        res.status.apply(200).end(rows);
     }catch(error){
         res.status(400).send(error.message);
     }
