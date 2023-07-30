@@ -64,6 +64,7 @@ app.get("/addUser/:fname/:lname/:uname/:pswd/:profession/:gender", async functio
         // This will help in waiting for further calls
         //res.status(200).json({user_id: result.insertedId});
         res.status(200).send("Successfully added..Thank you");
+        res.status(200).send("Successfully added..Thank you");
         // This will end the communication
         //res.status.apply(200).end(rows);
     }catch(error){
