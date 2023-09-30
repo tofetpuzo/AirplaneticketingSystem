@@ -77,6 +77,16 @@ app.get("/reg", function (req, res) {
 });
 
 
+app.get("/reg", function (req, res) {
+
+    // This code is to read data from file
+    fs.readFile("./reg_form.html", "utf8", function (err, data) {
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        res.end(data);
+    });
+
+});
+
 // this helps to read html file
 
 
