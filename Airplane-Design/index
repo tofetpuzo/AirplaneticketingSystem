@@ -117,6 +117,8 @@
                 <p> </p>
                 <td>  <input style="width: 2in; height: 0.3in;" type="email" class="form-control" name="username" id="uname"
                     aria-describedby="emailHelpId" placeholder=""></td>
+                <td>  <input style="width: 2in; height: 0.3in;" type="email" class="form-control" name="username" id="uname"
+                    aria-describedby="emailHelpId" placeholder=""></td>
             </tr>
            
         </table>
